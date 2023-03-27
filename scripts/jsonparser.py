@@ -12,7 +12,7 @@ output_file_path = sys.argv[2]
 output_data = []
 
 for file_name in os.listdir(directory_path):
-    if file_name.endswith(".json"):
+    if "json" in file_name:
         with open(os.path.join(directory_path, file_name), "r") as file:
             file_data = json.load(file)
             if isinstance(file_data, list):
