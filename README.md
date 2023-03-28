@@ -2,4 +2,4 @@
 Scripts pour gérer les données de scouting pendant les compétitions.
 
 
-2023 -> http://scoutingdata.2626.live/2023.json
+2023 -> https://scoutingdata.2626.live/2023.json
