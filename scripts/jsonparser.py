@@ -13,7 +13,7 @@ output_data = []
 
 for file_name in os.listdir(directory_path):
     if "json" in file_name:
-        with open(os.path.join(directory_path, file_name), "r") as file:
+        with open(os.path.join(directory_path, file_name), "r", encoding='utf-8-sig') as file:
             file_data = json.load(file)
             if isinstance(file_data, list):
                 output_data.extend(file_data)
