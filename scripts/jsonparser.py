@@ -20,8 +20,11 @@ for file_name in os.listdir(directory_path):
             else:
                 output_data.append(file_data)
 
-# Remove duplicates
-output_data = list(dict.fromkeys(output_data))
+output_data_no_duplicates = []
+
+for out_dat in output_data:
+    if out_dat not in output_data_no_duplicates:
+        output_data_no_duplicates.append(out_dat)
 
 with open(output_file_path, "w") as output_file:
-    json.dump(output_data, output_file)
+    json.dump(output_data_no_duplicates, output_file)
